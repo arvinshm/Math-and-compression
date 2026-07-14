@@ -18,8 +18,7 @@ The interesting result appears when the benchmark is evaluated with a much
 tighter generation budget, `max_new_tokens = 512`. Under that cap, the base
 model drops to `258/500 = 51.6%`. Correctness-only GRPO barely changes this:
 `260/500 = 52.0%`. But correctness-plus-brevity GRPO improves the constrained
-benchmark to `291/500 = 58.2%`. A paired McNemar test gives `p = 0.0020` versus
-the base model and `p = 0.0039` versus correctness-only GRPO.
+benchmark to `291/500 = 58.2%`.
 
 My interpretation is that this is evidence for a constrained capability
 improvement, not a general MATH-500 capability improvement. Brevity training
@@ -429,7 +428,7 @@ the evaluation itself is token-budget constrained.
 
 ### Main Lesson
 
-The cleanest summary is:
+The summary is:
 
 ```text
 High budget, 1536 tokens:
